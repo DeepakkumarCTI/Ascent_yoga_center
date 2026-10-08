@@ -971,36 +971,80 @@ ${message}`;
           <div className="mt-6 grid grid-cols-2 gap-2.5 sm:mt-7 sm:flex sm:justify-center sm:gap-3 lg:mt-8">
 
             <Link
-              to="/explore"
-              className="
-                flex
-                min-h-[40px]
-                items-center
-                justify-center
-                rounded-full
-                bg-white
-                px-3
-                py-2.5
-                text-[9px]
-                font-semibold
-                text-[#3D007A]
-                shadow-[0_8px_25px_rgba(0,0,0,0.12)]
-                transition-all
-                duration-300
-                hover:-translate-y-1
-                hover:shadow-[0_12px_30px_rgba(0,0,0,0.22)]
-                sm:min-h-[44px]
-                sm:px-5
-                sm:py-3
-                sm:text-[10px]
-                lg:min-h-[48px]
-                lg:px-7
-                lg:py-3.5
-                lg:text-sm
-              "
-            >
-              Explore Programs
-            </Link>
+  to="/explore"
+  className="
+    group/explore
+    relative
+    z-[100]
+    flex
+    min-h-[40px]
+    items-center
+    justify-center
+    overflow-hidden
+    rounded-full
+    border
+    border-white
+    bg-white
+    px-3
+    py-2.5
+    text-[9px]
+    font-semibold
+    text-[#3D007A]
+    shadow-[0_8px_25px_rgba(0,0,0,0.12)]
+    transition-all
+    duration-300
+    hover:-translate-y-1
+    hover:bg-[#E1B270]
+    hover:text-[#21003f]
+    hover:shadow-[0_12px_30px_rgba(225,178,112,0.35)]
+    sm:min-h-[44px]
+    sm:px-5
+    sm:py-3
+    sm:text-[10px]
+    lg:min-h-[48px]
+    lg:px-7
+    lg:py-3.5
+    lg:text-sm
+  "
+>
+  {/* Animated shine */}
+  <span
+    className="
+      pointer-events-none
+      absolute
+      inset-y-0
+      left-[-70%]
+      z-0
+      w-[45%]
+      -skew-x-12
+      bg-gradient-to-r
+      from-transparent
+      via-white/70
+      to-transparent
+      opacity-0
+      transition-all
+      duration-700
+      group-hover/explore:left-[130%]
+      group-hover/explore:opacity-100
+    "
+  />
+
+  {/* Visible text */}
+  <span
+    className="
+      relative
+      z-20
+      whitespace-nowrap
+      font-semibold
+      text-[#3D007A]
+      transition-colors
+      duration-300
+      group-hover/explore:text-[#21003f]
+    "
+  >
+    Explore Programs
+  </span>
+</Link>
 
             <a
               href="https://wa.me/919000000000?text=Hello%20Ascent%20Yoga%20Centre%2C%20I%20would%20like%20to%20know%20about%20your%20classes."
