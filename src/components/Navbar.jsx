@@ -430,34 +430,38 @@ export default function Navbar() {
               ))}
 
               {/* Mobile Book Button */}
-              <Link
-                to="/contact"
-                onClick={() => setOpen(false)}
-                className="
-                  group/mobile-book relative mt-4 block
-                  overflow-hidden rounded-full
-                  bg-[#3D007A]
-                  px-6 py-3.5
-                  text-center text-sm font-semibold text-white
-                  shadow-[0_6px_20px_rgba(61,0,122,0.18)]
-                  transition-all duration-300
-                  hover:bg-[#2d005b]
-                  active:scale-[0.98]
-                "
-              >
-                <span
-                  className="
-                    absolute inset-0 -translate-x-full
-                    bg-white/15
-                    transition-transform duration-500
-                    group-hover/mobile-book:translate-x-0
-                  "
-                />
+<Link
+  to="/contact"
+  onClick={() => setOpen(false)}
+  className="
+    group/mobile-book relative mt-4 block
+    overflow-hidden rounded-full
+    bg-white
+    border border-[#3D007A]/20
+    px-6 py-3.5
+    text-center text-sm font-semibold
+    text-[#3D007A]
+    shadow-[0_6px_20px_rgba(61,0,122,0.12)]
+    transition-all duration-300
+    hover:bg-[#F7F2FF]
+    hover:border-[#3D007A]/30
+    hover:shadow-[0_8px_25px_rgba(61,0,122,0.18)]
+    active:scale-[0.98]
+  "
+>
+  <span
+    className="
+      absolute inset-0 -translate-x-full
+      bg-[#3D007A]/[0.06]
+      transition-transform duration-500
+      group-hover/mobile-book:translate-x-0
+    "
+  />
 
-                <span className="relative z-10">
-                  Book a Class
-                </span>
-              </Link>
+  <span className="relative z-10 text-[#3D007A]">
+    Book a Class
+  </span>
+</Link>
             </nav>
           </div>
         </div>
